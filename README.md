@@ -151,6 +151,7 @@ Volte para a pasta `myproject` e edite o `urls.py` principal:
 
 ```
 cd ..
+
 cat << EOF > urls.py
 from django.contrib import admin
 from django.urls import include, path
@@ -176,6 +177,7 @@ Vamos criar os templates `base.html`:
 
 ```
 mkdir templates
+
 cat << EOF > templates/base.html
 <!-- https://getbootstrap.com/docs/4.0/getting-started/introduction/#starter-template -->
 {% load static %}
@@ -255,6 +257,7 @@ Vamos criar o menu:
 
 ```
 mkdir templates/includes
+
 cat << EOF > templates/includes/nav.html
 <!-- https://github.com/JTruax/bootstrap-starter-template/blob/master/template/start.html -->
 
