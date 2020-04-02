@@ -36,10 +36,14 @@ python manage.py migrate
 python -m venv .venv
 source .venv/bin/activate
 pip install -U pip; pip install django==2.2.12 django-extensions python-decouple dj-database-url
+pip freeze > requirements.txt
 django-admin startproject myproject .
 cd myproject
 python ../manage.py startapp core
 cd ..
+python manage.py migrate
+# Crie um super usuário
+python manage.py createsuperuser --username="admin"
 ```
 
 #### Criando uma pasta chamada contrib com um env_gen.py
@@ -317,7 +321,7 @@ E um para o JS:
 cat << EOF > static/js/myvue.js
 var app = new Vue({
   el: '#app',
-  delimiters: ['${', '}'],
+  delimiters: ['\${', '}'],
   data: {
     users: [
       { 'username': 'Huguinho' },
@@ -390,7 +394,7 @@ cat << EOF > myproject/core/templates/index.html
     <div class="col">
       <h3>Dados do VueJS</h3>
       <ul>
-        <li v-for="user in users" :class="{'no': user.username == 'admin'}">${ user.username }</li>
+        <li v-for="user in users" :class="{'no': user.username == 'admin'}">\${ user.username }</li>
       </ul>
     </div>
     <div class="col">
