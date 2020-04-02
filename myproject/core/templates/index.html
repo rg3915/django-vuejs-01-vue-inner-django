@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="app">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Olá!</h1>
+      <p>Este é um projeto feito com <a href="https://www.djangoproject.com/" target="_blank">Django</a> e <a href="https://vuejs.org/" target="_blank">VueJS</a>.</p>
+      <p>
+        <a href="https://github.com/rg3915/django-vuejs-01-vue-inner-django" target="_blank">Veja no GitHub</a>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>Dados do VueJS</h3>
+      <ul>
+        <li v-for="user in users" :class="{'no': user.username == 'admin'}">${ user.username }</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Dados do Django</h3>
+      <ul>
+        {% for user in users %}
+          <li>{{ user }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
