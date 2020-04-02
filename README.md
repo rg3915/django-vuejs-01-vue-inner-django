@@ -2,6 +2,7 @@
 
 Neste projeto eu uso [Django][1] e sua renderização tradicional de templates, e uso o [VueJS][2] apenas como um arquivo estático via CDN. Inclui também [axios][3] via CDN.
 
+![django-vue01.png](img/django-vue01.png)
 
 ## Como rodar o projeto?
 
