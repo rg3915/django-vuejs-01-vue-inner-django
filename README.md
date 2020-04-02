@@ -5,12 +5,6 @@ Neste projeto eu uso [Django][1] e sua renderização tradicional de templates, 
 
 ## Como rodar o projeto?
 
-Em Dev rodar dois servidores, back e front.
-
-Depois fazer `npm run build` para gerar os arquivos pra rodar somente com Django.
-
-### Backend
-
 * Clone esse repositório.
 * Crie um virtualenv com Python 3.
 * Ative o virtualenv.
@@ -482,10 +476,6 @@ var app = new Vue({
   }
 })
 ```
-
-
-
-
 
 [1]: https://www.djangoproject.com/
 [2]: https://vuejs.org/
